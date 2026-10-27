@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Caleb Garrard">
+<meta property="og:description" content="Texas Ranchers GM, head coach and marketing director, worship leader at In Focus Church, founder of Afterword.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Caleb Garrard</title>
+<meta name="description" content="Caleb Garrard: Texas Ranchers GM, head coach and marketing director, worship leader at In Focus Church, founder of Afterword.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: a spec book. Sticky index bar; a hero with the thesis and a strip of work at its real formats;
+     three bands (Match days, Sundays, Build days); every project pairs a spec header with justified
+     media rows that keep each piece at its true aspect ratio and label its format. */
+  :root {
+    --paper: #f2f4f6;
+    --surface: #ffffff;
+    --ink: #121922;
+    --muted: #566170;
+    --rule: #d3d9e0;
+    --accent: #b8322a;
+    --chip: #e3e7ec;
+    --scrim: rgba(9, 12, 16, 0.96);
+    --scrim-ink: #f1f4f7;
+    --scrim-line: rgba(241, 244, 247, 0.35);
+    --display: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "Martian Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --row-h: 300px;
+    --row-max: 400px;
+    --gap: 12px;
+    --gutter-x: clamp(16px, 4vw, 44px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0e1319; --surface: #151c24; --ink: #e8ecf1; --muted: #9ba7b5;
+      --rule: #28323d; --accent: #ff6b57; --chip: #1e2731; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0e1319; --surface: #151c24; --ink: #e8ecf1; --muted: #9ba7b5;
+    --rule: #28323d; --accent: #ff6b57; --chip: #1e2731; color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 16px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+    z-index: 10; background: var(--paper);
+  }
+  .wrap {
+    max-width: 1280px; margin-inline: auto;
+    padding-left: max(var(--gutter-x), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--gutter-x), env(safe-area-inset-right, 0px));
+  }
+  [id] { scroll-margin-top: 76px; }
+  a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  .label {
+    font-family: var(--mono); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.07em; text-transform: uppercase;
+  }
+
+  /* Index bar */
+  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 6px 20px; min-height: 52px; padding-block: 8px; }
+  .mark {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 0.95rem;
+    letter-spacing: 0.01em; text-transform: uppercase; text-decoration: none; white-space: nowrap;
+  }
+  .bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px 18px; }
+  .bar nav a { color: var(--muted); text-decoration: none; padding-block: 4px; }
+  .bar nav a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero { padding-block: clamp(36px, 7vw, 92px) 0; }
+  .eyebrow { color: var(--accent); }
+  h1 {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800;
+    font-size: clamp(2.6rem, 10.5vw, 9rem); line-height: 0.86; letter-spacing: -0.015em;
+    text-transform: uppercase; margin: 14px 0 0;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px clamp(28px, 5vw, 80px); align-items: end; margin-top: clamp(22px, 3.5vw, 44px);
+  }
+  .lede {
+    font-family: var(--display); font-weight: 650; font-size: clamp(1.4rem, 2.7vw, 2.1rem);
+    line-height: 1.16; letter-spacing: -0.012em; max-width: 24ch; margin: 0 0 16px;
+  }
+  .hero-copy > p:not(.lede) { margin: 0 0 18px; max-width: 58ch; }
+  .contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
+  .email { font-family: var(--mono); font-size: 0.82rem; -webkit-user-select: all; user-select: all; overflow-wrap: anywhere; }
+  .btn {
+    font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--ink); background: var(--surface); border: 1px solid var(--rule); padding: 7px 10px;
+    cursor: pointer; text-decoration: none; line-height: 1.2;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .proof { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
+  .proof div {
+    border-top: 1px solid var(--rule); padding: 12px 0; min-width: 0;
+    display: grid; grid-template-columns: 8.2rem minmax(0, 1fr); gap: 14px; align-items: baseline;
+  }
+  .proof dt {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .proof dd { margin: 0; font-size: 0.86rem; line-height: 1.35; color: var(--muted); }
+
+  /* Media rows: flex-grow and basis are proportional to each piece's aspect ratio (set inline),
+     so every piece in a row lands at the same height; max-width caps very tall rows. */
+  .media { display: flex; flex-wrap: wrap; gap: var(--gap); align-items: flex-start; }
+  .m { margin: 0; min-width: 0; }
+  .m img, .m video { display: block; width: 100%; height: auto; background: var(--chip); }
+  .m video { aspect-ratio: var(--ar); object-fit: cover; }
+  .m figcaption, .strip .cap { display: block; margin-top: 7px; font-size: 0.8rem; line-height: 1.35; color: var(--muted); }
+  .fmt {
+    display: inline-block; font-family: var(--mono); font-size: 0.58rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); background: var(--chip);
+    padding: 2px 6px; margin-right: 7px; vertical-align: 1px; white-space: nowrap;
+  }
+  .zoom { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+  .zoom img { transition: opacity 0.2s; }
+  .zoom:hover img { opacity: 0.9; }
+  .strip { margin-top: clamp(32px, 5vw, 60px); --row-h: 270px; --row-max: 400px; }
+  .strip a { text-decoration: none; color: inherit; }
+  .strip img { display: block; width: 100%; height: auto; background: var(--chip); }
+  .strip a:hover .cap { color: var(--accent); }
+  /* Per-gallery sizing: two-piece galleries may grow taller; wide-only galleries sit lower. */
+  .media.big { --row-max: 520px; }
+  .media.huge { --row-max: 640px; }
+  .media.tight { --row-h: 250px; }
+
+  /* Bands */
+  .world { margin-top: clamp(64px, 9vw, 120px); }
+  .world-head {
+    border-top: 3px solid var(--ink); padding-top: clamp(18px, 2.5vw, 28px);
+    display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px 48px; align-items: end;
+  }
+  .world-head .label { display: block; color: var(--accent); margin-bottom: 12px; }
+  .world-head h2, .foot h2 {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(2.5rem, 7vw, 6rem);
+    line-height: 0.88; letter-spacing: -0.015em; text-transform: uppercase; margin: 0;
+  }
+  .world-head p { margin: 0; max-width: 46ch; color: var(--muted); font-size: 1.02rem; }
+
+  /* Organizations */
+  .org { margin-top: clamp(44px, 6vw, 84px); }
+  .org-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: 6px 24px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+  }
+  .org-head h3 {
+    font-family: var(--display); font-stretch: 112%; font-weight: 760; font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+    line-height: 1.02; letter-spacing: -0.01em; margin: 0;
+  }
+  .org-head .label { color: var(--muted); }
+  .org-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 20px 48px; margin-top: 18px; }
+  .org-intro p { margin: 0 0 10px; max-width: 64ch; }
+  .org > .media { margin-top: 26px; }
+  .roles { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; align-content: start; }
+  .roles li {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+    gap: 2px 16px; border-bottom: 1px solid var(--rule); padding-bottom: 7px;
+  }
+  .roles b { font-weight: 600; }
+  .roles span { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .roles.spec span { text-transform: uppercase; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 6px; }
+  .links a { color: var(--accent); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 24px; margin: 26px 0 0; }
+  .stats div { border-top: 2px solid var(--ink); padding-top: 10px; min-width: 0; }
+  .stats dt, .event dt {
+    font-family: var(--display); font-stretch: 125%; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .stats dt { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
+  .stats dd, .event dd { margin: 6px 0 0; font-size: 0.84rem; color: var(--muted); line-height: 1.35; }
+  .source { font-size: 0.76rem; color: var(--muted); margin: 12px 0 0; }
+
+  /* Projects */
+  .project { margin-top: clamp(32px, 4.5vw, 56px); }
+  .project-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr); gap: 10px 48px; margin-bottom: 16px; }
+  .project-head h4 {
+    font-family: var(--display); font-weight: 720; font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+    line-height: 1.15; letter-spacing: -0.005em; margin: 0;
+  }
+  .when { display: block; margin-top: 8px; color: var(--muted); }
+  .project-head p { margin: 0 0 8px; max-width: 66ch; }
+  .credit { font-size: 0.78rem; color: var(--muted); }
+
+  /* League events */
+  .events { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--gap); margin-top: 24px; }
+  .event { background: var(--surface); border: 1px solid var(--rule); padding: 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .event .when { margin-top: 0; }
+  .event h4 { font-family: var(--display); font-weight: 720; font-size: 1.15rem; line-height: 1.2; margin: 0; }
+  .event dl { margin: 0; display: grid; gap: 14px; }
+  .event dt { font-size: 1.9rem; }
+  .event dt.lead { color: var(--accent); }
+  .event .source { margin-top: auto; padding-top: 4px; }
+
+  /* Smaller notes */
+  .also { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px 48px; margin-top: clamp(44px, 6vw, 76px); }
+  .also section { border-top: 1px solid var(--rule); padding-top: 14px; min-width: 0; }
+  .also h3 { font-family: var(--display); font-stretch: 112%; font-weight: 740; font-size: 1.3rem; line-height: 1.1; margin: 0; }
+  .also .label { display: block; margin-top: 8px; color: var(--muted); }
+  .also p { margin: 10px 0 0; max-width: 62ch; }
+
+  /* Footer */
+  .foot { margin-top: clamp(72px, 10vw, 136px); padding-block: 0 clamp(40px, 6vw, 72px); }
+  .foot-grid {
+    border-top: 3px solid var(--ink); padding-top: clamp(18px, 2.5vw, 28px);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 48px; align-items: end;
+  }
+  .foot .eyebrow { display: block; margin-bottom: 12px; }
+  .foot .small { font-size: 0.82rem; color: var(--muted); margin: 14px 0 0; }
+  .credits { margin-top: 36px !important; }
+
+  /* Image viewer */
+  #viewer {
+    position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0;
+    padding: max(12px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px))
+             max(12px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    background: var(--scrim); color: var(--scrim-ink);
+  }
+  #viewer[open] { display: flex; flex-direction: column; gap: 10px; }
+  #viewer::backdrop { background: transparent; }
+  .viewer-bar { display: flex; align-items: center; gap: 12px; }
+  .viewer-cap { margin: 0; font-size: 0.9rem; min-width: 0; flex: 1; }
+  .viewer-count { font-family: var(--mono); font-size: 0.68rem; opacity: 0.75; }
+  .viewer-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  #viewer-img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+  .viewer-nav { display: flex; justify-content: space-between; gap: 12px; }
+  .vbtn {
+    font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--scrim-ink); background: transparent; border: 1px solid var(--scrim-line); padding: 9px 12px; cursor: pointer;
+  }
+  .vbtn:hover { border-color: var(--scrim-ink); }
+  .vbtn:focus-visible { outline-color: var(--scrim-ink); }
+
+  @media (max-width: 880px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); }
+    .proof { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .proof div { display: block; padding-bottom: 0; }
+    .proof dt { font-size: clamp(1.2rem, 5.4vw, 1.9rem); }
+    .proof dd { margin-top: 8px; font-size: 0.78rem; }
+  }
+  @media (max-width: 800px) {
+    :root { --row-h: 160px; --row-max: 440px; }
+    .strip { --row-h: 140px; --row-max: 300px; }
+    .media.tight { --row-h: 160px; }
+    .world-head, .org-intro, .project-head, .foot-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .mark { display: none; }
+    .bar nav { justify-content: flex-start; gap: 2px 14px; }
+    :root { --gap: 8px; }
+  }
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Caleb Garrard</a>
+    <nav class="label" aria-label="Sections">
+      <a href="#ranchers">Ranchers</a>
+      <a href="#upa">UPA</a>
+      <a href="#sundays">Church</a>
+      <a href="#build-days">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="name">
+    <span class="label eyebrow">Portfolio · Evans, Georgia</span>
+    <h1 id="name">Caleb Garrard</h1>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="lede">I turn big moments into audiences that keep coming back.</p>
+        <p>For 12 years I've built content, brands and teams in pro pickleball and the church. I'm the general manager, head coach and marketing director of the Texas Ranchers in Major League Pickleball, worship leader at In Focus Church, and the founder of Afterword.</p>
+        <div class="contact-row">
+          <span class="email" id="hero-email">caleb.garrard@gmail.com</span>
+          <button class="btn" type="button" id="copy-hero" data-copy="caleb.garrard@gmail.com" data-target="hero-email">Copy email</button>
+          <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+      <dl class="proof">
+        <div><dt>1.3M+</dt><dd>Instagram views on Texas Ranchers reels, May–Oct 2026</dd></div>
+        <div><dt>30M</dt><dd>views on PPA Tour social for the 2025 CIBC Texas Open</dd></div>
+        <div><dt>880K+</dt><dd>streams across six In Focus Worship releases</dd></div>
+      </dl>
+    </div>
+    <div class="media strip"><a class="m" href="#ranchers" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" alt="Texas Ranchers" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Texas Ranchers</span></a><a class="m" href="#ranchers" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="Texas Ranchers" decoding="async"><span class="cap"><span class="fmt">3:4 feed</span>Texas Ranchers</span></a><a class="m" href="#grace-covenant" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" alt="Grace Covenant" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Grace Covenant</span></a><a class="m" href="#afterword" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="Afterword" decoding="async"><span class="cap"><span class="fmt">App</span>Afterword</span></a><a class="m" href="#in-focus" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><img src="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" alt="In Focus Church" decoding="async"><span class="cap"><span class="fmt">16:9 film</span>In Focus Church</span></a></div>
+  </section>
+
+  <!-- ===================== MATCH DAYS ===================== -->
+  <section class="world wrap" id="match-days" aria-labelledby="match-days-h">
+    <div class="world-head">
+      <div><span class="label">Pro pickleball</span><h2 id="match-days-h">Match days</h2></div>
+      <p>Team, league and freelance work in professional pickleball.</p>
+    </div>
+
+    <article class="org" id="ranchers">
+      <div class="org-head">
+        <h3>Texas Ranchers</h3>
+        <span class="label">Major League Pickleball · Austin, Texas</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles">
+          <li><b>General Manager, Head Coach &amp; Marketing Director</b><span>Dec 2025–Present</span></li>
+          <li><b>Assistant Coach</b><span>Feb–Dec 2025</span></li>
+        </ul>
+        <div>
+          <p>I run the roster, coach the team and lead marketing for one of MLP's founding teams. In 2026 we went 16–12, reached the quarterfinals as the 8th seed and took third at our home event, MLP Austin. I also relaunched ranchers.com in September 2026.</p>
+          <div class="links label"><a href="https://ranchers.com" target="_blank" rel="noopener">ranchers.com ↗</a></div>
+        </div>
+      </div>
+      <dl class="stats">
+        <div><dt>1.3M+</dt><dd>Instagram views on reels published May–October 2026</dd></div>
+        <div><dt>240K+</dt><dd>Instagram views during MLP Austin week</dd></div>
+        <div><dt>88K</dt><dd>views on the top reel in June 2026</dd></div>
+        <div><dt>21K</dt><dd>followers across six platforms, August 2026</dd></div>
+      </dl>
+      <p class="source">Source: Metricool reports.</p>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Ranchers On Tour</h4><span class="label when">Sep–Oct 2026 · Design and video</span></div>
+          <div>
+            <p>Our players also compete on the PPA Tour. For the fall stretch I built a game-day graphics system to follow them: daily schedules, semifinal and final cards, medal posts and where-to-watch graphics for Las Vegas, Chicago and Virginia Beach, about 90 graphics in all. The recap reel covers the run: five Ranchers, five straight weekends, six finals and three titles.</p>
+            <p class="credit">Photos and footage: PPA Tour.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-tour-recap.mp4" poster="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers On Tour recap"></video><figcaption><span class="fmt">9:16 reel</span>Ranchers On Tour recap</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Kaitlyn Christian, gold in Las Vegas" aria-label="View larger: Kaitlyn Christian, gold in Las Vegas"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="Kaitlyn Christian, gold in Las Vegas" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Kaitlyn Christian, gold in Las Vegas</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Eric Oncins, gold in Virginia Beach" aria-label="View larger: Eric Oncins, gold in Virginia Beach"><img src="assets/ranchers-tour-eric-gold.jpg" width="1080" height="1440" alt="Eric Oncins, gold in Virginia Beach" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Eric Oncins, gold in Virginia Beach</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><button class="zoom" type="button" data-cap="Match-day schedule" aria-label="View larger: Match-day schedule"><img src="assets/ranchers-tour-oncins-r32.jpg" width="900" height="1600" alt="Match-day schedule" loading="lazy" decoding="async"></button><figcaption><span class="fmt">9:16 story</span>Match-day schedule</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Semifinal poster, Arizona Open" aria-label="View larger: Semifinal poster, Arizona Open"><img src="assets/ranchers-gameday-az.jpg" width="1280" height="1600" alt="Semifinal poster, Arizona Open" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 poster</span>Semifinal poster, Arizona Open</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Breakdown series</h4><span class="label when">Oct 2026 · Host and producer</span></div>
+          <div>
+            <p>Film-room breakdowns of real Ranchers points, with me on camera as the analyst, cut for Reels, TikTok, Shorts and YouTube. In "How We Beat ALW," I walk through a mixed doubles point from MLP Austin: Eric Oncins and Layne Sleeth against Anna Leigh Waters and Noe Khlif of the New Jersey 5s.</p>
+            <p class="credit">Footage: MLP broadcast.</p>
+          </div>
+        </div>
+        <div class="media big"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-breakdown-alw.mp4" poster="assets/ranchers-breakdown-alw-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="How We Beat ALW"></video><figcaption><span class="fmt">9:16</span>How We Beat ALW</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="YouTube cover" aria-label="View larger: YouTube cover"><img src="assets/ranchers-breakdown-alw-cover.jpg" width="1600" height="900" alt="YouTube cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>YouTube cover</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>MLP Austin 2026</h4><span class="label when">Jun 11–14, 2026 · Marketing and design</span></div>
+          <div>
+            <p>Our home event. I led the marketing and designed the ticket campaign and the on-site wayfinding: flags, posters, A-frames and decals. Ranchers reels drew 240K+ Instagram views that week, and our partner BAiO drew an estimated 40M+ brand impressions and 1,000+ sign-ups at the event.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/mlp-atx-invite.mp4" poster="assets/mlp-atx-invite-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Blooper invite reel"></video><figcaption><span class="fmt">9:16 reel</span>Blooper invite reel</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Ticket campaign" aria-label="View larger: Ticket campaign"><img src="assets/mlp-atx-campaign.jpg" width="1280" height="1600" alt="Ticket campaign" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 feed</span>Ticket campaign</figcaption></figure><figure class="m" style="--ar:0.7856;flex:78.6 1 calc(0.7856 * var(--row-h));max-width:calc(0.7856 * var(--row-max))"><button class="zoom" type="button" data-cap="Venue poster" aria-label="View larger: Venue poster"><img src="assets/mlp-atx-poster.jpg" width="1257" height="1600" alt="Venue poster" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Venue poster</figcaption></figure><figure class="m" style="--ar:0.7778;flex:77.8 1 calc(0.7778 * var(--row-h));max-width:calc(0.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Signage key" aria-label="View larger: Signage key"><img src="assets/mlp-atx-signage-key.jpg" width="1400" height="1800" alt="Signage key" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Signage key</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Offseason merch push</h4><span class="label when">Oct 23–Nov 19, 2026 · Creative direction</span></div>
+          <div>
+            <p>A full launch package for the Offseason Collection: 7 reels, 2 carousels, 9 feed posts, 17 ads, 5 stories and 59 product cutouts, scheduled through November 19.</p>
+          </div>
+        </div>
+        <div class="media tight"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-merch-reel.mp4" poster="assets/ranchers-merch-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Offseason Collection reel"></video><figcaption><span class="fmt">9:16 reel</span>Offseason Collection reel</figcaption></figure><figure class="m" style="--ar:3.9430;flex:394.3 1 calc(3.9430 * var(--row-h));max-width:calc(3.9430 * var(--row-max))"><button class="zoom" type="button" data-cap="The seven-reel lineup" aria-label="View larger: The seven-reel lineup"><img src="assets/ranchers-merch-lineup.jpg" width="2212" height="561" alt="The seven-reel lineup" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Covers</span>The seven-reel lineup</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Season stories and community</h4><span class="label when">2026 · Design</span></div>
+          <div>
+            <p>Weekly and season-long storytelling: Player of the Weekend, the Ranchers Index and a By the Numbers recap of 2026 (37 matches, 153 games, 10 Dreambreakers, 12,224 miles, 8 events in 6 states). Plus community events, including For Her, We Rally, a breast cancer benefit on October 17, and the Texas MiLP State Championship on November 14–15.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="2026 by the numbers" aria-label="View larger: 2026 by the numbers"><img src="assets/ranchers-by-the-numbers.jpg" width="1080" height="1350" alt="2026 by the numbers" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>2026 by the numbers</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Player of the Weekend" aria-label="View larger: Player of the Weekend"><img src="assets/ranchers-potw-nico.jpg" width="1080" height="1350" alt="Player of the Weekend" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 feed</span>Player of the Weekend</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-index-mover.mp4" poster="assets/ranchers-index-mover-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers Index, biggest mover"></video><figcaption><span class="fmt">9:16</span>Ranchers Index, biggest mover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="For Her, We Rally" aria-label="View larger: For Her, We Rally"><img src="assets/ranchers-for-her.jpg" width="1080" height="1350" alt="For Her, We Rally" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 feed</span>For Her, We Rally</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Texas MiLP State Championship" aria-label="View larger: Texas MiLP State Championship"><img src="assets/ranchers-state-champs.jpg" width="1080" height="1440" alt="Texas MiLP State Championship" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Texas MiLP State Championship</figcaption></figure></div>
+      </div>
+    </article>
+
+    <article class="org" id="upa">
+      <div class="org-head">
+        <h3>United Pickleball Association</h3>
+        <span class="label">PPA Tour and Major League Pickleball · Remote</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles">
+          <li><b>Social Media Manager</b><span>Mar–Dec 2025</span></li>
+        </ul>
+        <div>
+          <p>League-side social for the PPA Tour and MLP, separate from my Ranchers work. I covered events across Instagram, Facebook, X and TikTok and worked with creators and players. These were my biggest events of the year.</p>
+        </div>
+      </div>
+      <div class="events">
+        <section class="event" aria-labelledby="ev-worlds">
+          <span class="label when">Oct 31–Nov 9, 2025 · Farmers Branch, Texas</span>
+          <h4 id="ev-worlds">2025 Jenius Bank Pickleball World Championships</h4>
+          <dl>
+            <div><dt class="lead">54M</dt><dd>impressions on official social handles</dd></div>
+            <div><dt>60,000+</dt><dd>fans at Brookhaven Country Club, a record</dd></div>
+            <div><dt>70M</dt><dd>minutes viewed on Pickleballtv, a record</dd></div>
+          </dl>
+          <p class="source"><a href="https://www.ppatour.com/2025-jenius-bank-pickleball-world-championships-break-attendance-participation-and-viewership-records/" target="_blank" rel="noopener">PPA Tour, Nov 19, 2025 ↗</a></p>
+        </section>
+        <section class="event" aria-labelledby="ev-finals">
+          <span class="label when">Aug 22–24, 2025 · New York City</span>
+          <h4 id="ev-finals">2025 DoorDash MLP Finals Powered by Toray</h4>
+          <dl>
+            <div><dt class="lead">~20M</dt><dd>social impressions, 70% above MLP's previous single-event record</dd></div>
+            <div><dt>436K</dt><dd>average viewers for Finals Match 1 on CBS, MLP's most-watched match at the time</dd></div>
+            <div><dt>~1.5M</dt><dd>YouTube views over the event week</dd></div>
+          </dl>
+          <p class="source"><a href="https://majorleaguepickleball.co/news/major-league-pickleball-generates-robust-growth-across-all-business-areas-in-first-post-merger-season/" target="_blank" rel="noopener">MLP, Sep 16, 2025 ↗</a></p>
+        </section>
+        <section class="event" aria-labelledby="ev-texas">
+          <span class="label when">2025 · PPA Tour</span>
+          <h4 id="ev-texas">2025 CIBC Texas Open</h4>
+          <dl>
+            <div><dt class="lead">30M</dt><dd>views across PPA Tour platforms, the most-viewed tournament in PPA history at the time</dd></div>
+          </dl>
+          <p class="source">I ran PPA Tour social for this event.</p>
+        </section>
+      </div>
+      <p class="source">Event totals come from PPA Tour and MLP releases and reflect the whole league team's work.</p>
+    </article>
+
+    <div class="also">
+      <section id="freelance-pickleball">
+        <h3>Freelance pickleball</h3>
+        <span class="label">2024–2025 · Photo, video and social</span>
+        <p>King of the Court, where I grew @morekingofthecourt by 2,000 followers; DiNK'D Pickleball's weekly highlights and youth league; The Lab Austin; and pro Tyler Loong at the PPA Atlanta Slam.</p>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===================== SUNDAYS ===================== -->
+  <section class="world wrap" id="sundays" aria-labelledby="sundays-h">
+    <div class="world-head">
+      <div><span class="label">Church</span><h2 id="sundays-h">Sundays</h2></div>
+      <p>In Focus Church in Evans, Georgia, has been my home base since 2014. I also design for other churches on a freelance basis.</p>
+    </div>
+
+    <article class="org" id="in-focus">
+      <div class="org-head">
+        <h3>In Focus Church</h3>
+        <span class="label">Evans, Georgia</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles">
+          <li><b>Worship Leader</b><span>Oct 2026–Present</span></li>
+          <li><b>Worship &amp; Creative Arts Director</b><span>2019–2026</span></li>
+          <li><b>Worship and Graphics Leader</b><span>2017–2019</span></li>
+          <li><b>Graphic Designer</b><span>2014–2017</span></li>
+        </ul>
+        <div>
+          <p>I lead worship every weekend and own everything made for and from each service: series branding, service visuals, sermon uploads, clips, Shorts, Reels, YouTube and social.</p>
+          <div class="links label">
+            <a href="https://infocus.church" target="_blank" rel="noopener">infocus.church ↗</a>
+            <a href="https://www.youtube.com/@infocuschurch" target="_blank" rel="noopener">YouTube ↗</a>
+            <a href="https://www.instagram.com/infocuschurch/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>infocus.church and Brand System V1</h4><span class="label when">Oct 2026 · Brand, web and motion</span></div>
+          <div>
+            <p>A two-tone blue brand carried through a rebuilt Squarespace site and keynote-style launch films in 16:9, 9:16 and 3:1. The new site went live October 27, 2026.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/ifc-site-reveal.mp4" poster="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Website launch film"></video><figcaption><span class="fmt">16:9 film</span>Website launch film</figcaption></figure><figure class="m" style="--ar:0.4570;flex:45.7 1 calc(0.4570 * var(--row-h));max-width:calc(0.4570 * var(--row-max))"><button class="zoom" type="button" data-cap="Homepage" aria-label="View larger: Homepage"><img src="assets/ifc-site-home.jpg" width="914" height="2000" alt="Homepage" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>Homepage</figcaption></figure><figure class="m" style="--ar:0.8329;flex:83.3 1 calc(0.8329 * var(--row-h));max-width:calc(0.8329 * var(--row-max))"><button class="zoom" type="button" data-cap="Share images for every page" aria-label="View larger: Share images for every page"><img src="assets/ifc-site-share-grid.jpg" width="1166" height="1400" alt="Share images for every page" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Social</span>Share images for every page</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Jesus Said What?!</h4><span class="label when">Oct 2026 · Series identity and weekly content</span></div>
+          <div>
+            <p>One retro pixel look across 3:1 LED slides, lower thirds, YouTube thumbnails, Instagram carousels and reels with animated captions. The weekly pipeline behind it became Afterword.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-hard-things.mp4" poster="assets/jsw-reel-hard-things-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 3 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 3 reel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Series title" aria-label="View larger: Series title"><img src="assets/jsw-title.jpg" width="1600" height="900" alt="Series title" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Series title</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-treasure.mp4" poster="assets/jsw-reel-treasure-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 2 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 2 reel</figcaption></figure><figure class="m" style="--ar:1.6332;flex:163.3 1 calc(1.6332 * var(--row-h));max-width:calc(1.6332 * var(--row-max))"><button class="zoom" type="button" data-cap="Sunday LED slides" aria-label="View larger: Sunday LED slides"><img src="assets/jsw-overview.jpg" width="1140" height="698" alt="Sunday LED slides" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:1 LED</span>Sunday LED slides</figcaption></figure><figure class="m" style="--ar:1.8018;flex:180.2 1 calc(1.8018 * var(--row-h));max-width:calc(1.8018 * var(--row-max))"><button class="zoom" type="button" data-cap="Thumbnails in the feed" aria-label="View larger: Thumbnails in the feed"><img src="assets/jsw-thumbs.jpg" width="1600" height="888" alt="Thumbnails in the feed" loading="lazy" decoding="async"></button><figcaption><span class="fmt">YouTube</span>Thumbnails in the feed</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Forty Years, 1986–2026</h4><span class="label when">Sep–Oct 2026 · Anniversary identity</span></div>
+          <div>
+            <p>A color-block and photo-grid system for the church's 40th anniversary, built for 16:9 screens, 3:1 LED and lower thirds, plus tee, hoodie and hat graphics.</p>
+          </div>
+        </div>
+        <div class="media big"><figure class="m" style="--ar:1.5375;flex:153.8 1 calc(1.5375 * var(--row-h));max-width:calc(1.5375 * var(--row-max))"><button class="zoom" type="button" data-cap="Sunday screens" aria-label="View larger: Sunday screens"><img src="assets/ifc-40-overview.jpg" width="1722" height="1120" alt="Sunday screens" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9 + 3:1</span>Sunday screens</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Anniversary tee" aria-label="View larger: Anniversary tee"><img src="assets/ifc-40-tee.jpg" width="1120" height="1400" alt="Anniversary tee" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Merch</span>Anniversary tee</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Focus Coffee brand</h4><span class="label when">Sep 2026 · Identity, menus and signage</span></div>
+          <div>
+            <p>A refresh for the church's coffee shop, built around a cup character called The Regular: menu boards, TV screens, a printed menu and social. I also designed and built the shop's order-ahead app.</p>
+            <div class="links label"><a href="#focus-coffee-app">See the app</a></div>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Menu board" aria-label="View larger: Menu board"><img src="assets/focus-tv-menu.jpg" width="1600" height="900" alt="Menu board" loading="lazy" decoding="async"></button><figcaption><span class="fmt">TV 16:9</span>Menu board</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="The Regular" aria-label="View larger: The Regular"><img src="assets/focus-tv-regular.jpg" width="1600" height="900" alt="The Regular" loading="lazy" decoding="async"></button><figcaption><span class="fmt">TV 16:9</span>The Regular</figcaption></figure><figure class="m" style="--ar:0.6071;flex:60.7 1 calc(0.6071 * var(--row-h));max-width:calc(0.6071 * var(--row-max))"><button class="zoom" type="button" data-cap="Printed menu" aria-label="View larger: Printed menu"><img src="assets/focus-menu-print.jpg" width="850" height="1400" alt="Printed menu" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Printed menu</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Instagram post" aria-label="View larger: Instagram post"><img src="assets/focus-ig-regular.jpg" width="810" height="1080" alt="Instagram post" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Instagram post</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>In Focus Worship, Live It and the podcast</h4><span class="label when">2019–Present · Music and media</span></div>
+          <div>
+            <p>Worship leader, songwriter and producer for In Focus Worship: six releases from 2019 to 2023 with 880K+ streams, including The Garden (This Moment with God) with Integrity Music. I also launched the Live It YouTube series and the In Focus Church Podcast.</p>
+            <div class="links label">
+              <a href="https://youtube.com/playlist?list=PLVpASzij087qi9VrcoMK8pDzmhP1K-3S2" target="_blank" rel="noopener">Live It ↗</a>
+              <a href="https://www.buzzsprout.com/2658873" target="_blank" rel="noopener">Podcast ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="org" id="grace-covenant">
+      <div class="org-head">
+        <h3>Grace Covenant Church</h3>
+        <span class="label">Freelance</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles">
+          <li><b>Designer and art director</b><span>Freelance</span></li>
+        </ul>
+        <div>
+          <p>Sermon series packages, event graphics, social and campaign concepts, built from the church's briefs.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Christmas at Grace</h4><span class="label when">Oct 2026 · Concept and art direction</span></div>
+          <div>
+            <p>Concepts for this year's Christmas campaign, themed Peace. I narrowed seven directions to three for the pitch, O Holy Night, Joy to the World and Heavenly Host, each built for 16:9, 4:5 and 9:16.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Concept board" aria-label="View larger: Concept board"><img src="assets/gcc-christmas-board.jpg" width="2000" height="1125" alt="Concept board" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Board</span>Concept board</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="O Holy Night" aria-label="View larger: O Holy Night"><img src="assets/gcc-christmas-holy-night.jpg" width="1600" height="900" alt="O Holy Night" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>O Holy Night</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Joy to the World" aria-label="View larger: Joy to the World"><img src="assets/gcc-christmas-joy.jpg" width="1600" height="900" alt="Joy to the World" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Joy to the World</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Heavenly Host" aria-label="View larger: Heavenly Host"><img src="assets/gcc-christmas-host.jpg" width="1600" height="900" alt="Heavenly Host" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Heavenly Host</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Sermon series packages</h4><span class="label when">Aug–Oct 2026 · LED wall and screens</span></div>
+          <div>
+            <p>Full Sunday sets for Witness, A Vision Bigger Than You and Entrusted: art for a 3840×1080 LED wall plus 16:9 slides and lower thirds for walk-in, giving, communion and walk-out.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:3.5556;flex:355.6 1 calc(3.5556 * var(--row-h));max-width:calc(3.5556 * var(--row-max))"><button class="zoom" type="button" data-cap="Entrusted on the LED wall" aria-label="View larger: Entrusted on the LED wall"><img src="assets/gcc-entrusted-led.jpg" width="2400" height="675" alt="Entrusted on the LED wall" loading="lazy" decoding="async"></button><figcaption><span class="fmt">32:9 LED</span>Entrusted on the LED wall</figcaption></figure><figure class="m" style="--ar:1.6667;flex:166.7 1 calc(1.6667 * var(--row-h));max-width:calc(1.6667 * var(--row-max))"><button class="zoom" type="button" data-cap="Entrusted service overview" aria-label="View larger: Entrusted service overview"><img src="assets/gcc-entrusted-overview.jpg" width="2000" height="1200" alt="Entrusted service overview" loading="lazy" decoding="async"></button><figcaption><span class="fmt">System</span>Entrusted service overview</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Witness" aria-label="View larger: Witness"><img src="assets/gcc-witness.jpg" width="1600" height="900" alt="Witness" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Witness</figcaption></figure></div>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <div><h4>Events and social</h4><span class="label when">Aug–Oct 2026 · Design and video</span></div>
+          <div>
+            <p>Graphics for Campus Sunday and Men's Bowling Night, prayer carousels, and 44 Years of Grace, a 55-second anniversary reel.</p>
+          </div>
+        </div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/gcc-44-years-reel.mp4" poster="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="44 Years of Grace"></video><figcaption><span class="fmt">9:16 reel</span>44 Years of Grace</figcaption></figure><figure class="m" style="--ar:1.6913;flex:169.1 1 calc(1.6913 * var(--row-h));max-width:calc(1.6913 * var(--row-max))"><button class="zoom" type="button" data-cap="Campus Sunday" aria-label="View larger: Campus Sunday"><img src="assets/gcc-campus-sunday.jpg" width="1600" height="946" alt="Campus Sunday" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Screen</span>Campus Sunday</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Prayer carousel" aria-label="View larger: Prayer carousel"><img src="assets/gcc-prayer-carousel.jpg" width="810" height="1080" alt="Prayer carousel" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 carousel</span>Prayer carousel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Men&#x27;s Bowling Night" aria-label="View larger: Men&#x27;s Bowling Night"><img src="assets/gcc-bowling.jpg" width="1600" height="900" alt="Men&#x27;s Bowling Night" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Men&#x27;s Bowling Night</figcaption></figure></div>
+      </div>
+    </article>
+
+    <div class="also">
+      <section>
+        <h3>Engage Community Church</h3>
+        <span class="label">Freelance · Weekly content</span>
+        <p>I created content every week, led large-scale video shoots and ran the content pipeline.</p>
+      </section>
+      <section id="every-nation">
+        <h3>Every Nation Music</h3>
+        <span class="label">Music Intern · Nashville · 2018–2019</span>
+        <p>I worked on SevenVerseNine, recorded live at the 2019 Every Nation GO Conference. I led its visual identity, helped write and produce the songs, and played guitar and sang on every track.</p>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===================== BUILD DAYS ===================== -->
+  <section class="world wrap" id="build-days" aria-labelledby="build-days-h">
+    <div class="world-head">
+      <div><span class="label">Products</span><h2 id="build-days-h">Build days</h2></div>
+      <p>Software I designed and built for churches, a coffee shop and pro pickleball front offices.</p>
+    </div>
+
+    <article class="org" id="afterword">
+      <div class="org-head">
+        <h3>Afterword</h3>
+        <span class="label">Founder · Oct 2026–Present</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles spec">
+          <li><b>Role</b><span>Founder, designer, builder</span></li>
+          <li><b>For</b><span>Churches</span></li>
+          <li><b>Status</b><span>Opens Jan 4, 2027</span></li>
+        </ul>
+        <div>
+          <p>Afterword turns one sermon into a church's whole week of content: screen slides, lower thirds, Instagram carousels, the YouTube package and thumbnail, reels, a podcast episode and Google posts. Nothing publishes until the church approves it.</p>
+          <p>I built it inside In Focus Church's weekly workflow. In one week, a single sermon produced 74 slides and lower thirds, 3 carousels, 7 reels, a podcast episode and the full YouTube and Google package.</p>
+          <div class="links label">
+            <a href="https://afterwordai.com" target="_blank" rel="noopener">afterwordai.com ↗</a>
+            <a href="https://afterwordai.com/founders" target="_blank" rel="noopener">Founders pricing ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/afterword-walkthrough.mp4" poster="assets/afterword-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Product walkthrough"></video><figcaption><span class="fmt">16:9</span>Product walkthrough</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-watch-me-build.mp4" poster="assets/afterword-watch-me-build-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="Watch me build it"></video><figcaption><span class="fmt">9:16</span>Watch me build it</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-reel-revenge.mp4" poster="assets/afterword-reel-revenge-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="A reel Afterword cut from a sermon"></video><figcaption><span class="fmt">9:16 reel</span>A reel Afterword cut from a sermon</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="afterwordai.com" aria-label="View larger: afterwordai.com"><img src="assets/afterword-hero.jpg" width="1600" height="900" alt="afterwordai.com" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>afterwordai.com</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Reel review" aria-label="View larger: Reel review"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="Reel review" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Reel review</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Google post card" aria-label="View larger: Google post card"><img src="assets/afterword-companion.jpg" width="647" height="1400" alt="Google post card" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Google post card</figcaption></figure></div>
+    </article>
+
+    <article class="org" id="focus-coffee-app">
+      <div class="org-head">
+        <h3>Focus Coffee app</h3>
+        <span class="label">Designer and developer · 2026</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles spec">
+          <li><b>Role</b><span>Design and development</span></li>
+          <li><b>Built with</b><span>Expo, React Native, Square</span></li>
+          <li><b>Status</b><span>Private TestFlight beta</span></li>
+        </ul>
+        <div>
+          <p>An order-ahead and rewards app for Focus Coffee, In Focus Church's coffee shop: live Square menu and ordering, phone-number punch cards, points and perks, and daily games.</p>
+        </div>
+      </div>
+      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/focus-walkthrough.mp4" poster="assets/focus-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="App walkthrough"></video><figcaption><span class="fmt">16:9</span>App walkthrough</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Home" aria-label="View larger: Home"><img src="assets/focus-frame-6.jpg" width="1600" height="900" alt="Home" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Home</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Daily games" aria-label="View larger: Daily games"><img src="assets/focus-frame-48.jpg" width="1600" height="900" alt="Daily games" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Daily games</figcaption></figure><figure class="m" style="--ar:1.0000;flex:100.0 1 calc(1.0000 * var(--row-h));max-width:calc(1.0000 * var(--row-max))"><button class="zoom" type="button" data-cap="App icon" aria-label="View larger: App icon"><img src="assets/focus-icon.jpg" width="512" height="512" alt="App icon" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Icon</span>App icon</figcaption></figure></div>
+    </article>
+
+    <article class="org" id="third-shot">
+      <div class="org-head">
+        <h3>Third Shot</h3>
+        <span class="label">Founder · Prototype · 2026</span>
+      </div>
+      <div class="org-intro">
+        <ul class="roles spec">
+          <li><b>Role</b><span>Founder, designer</span></li>
+          <li><b>For</b><span>Pro pickleball front offices</span></li>
+          <li><b>Status</b><span>Prototype, sample data</span></li>
+        </ul>
+        <div>
+          <p>A scouting and prospect-ranking platform for pro pickleball. GMs and coaches grade film blind, a weighted Prospect Score ranks the players, and a Big Board lays it out for front offices.</p>
+        </div>
+      </div>
+      <div class="media huge"><figure class="m" style="--ar:1.4375;flex:143.8 1 calc(1.4375 * var(--row-h));max-width:calc(1.4375 * var(--row-max))"><button class="zoom" type="button" data-cap="Home, Big Board and a prospect profile, with sample data" aria-label="View larger: Home, Big Board and a prospect profile, with sample data"><img src="assets/thirdshot-screens.jpg" width="1150" height="800" alt="Home, Big Board and a prospect profile, with sample data" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Home, Big Board and a prospect profile, with sample data</figcaption></figure></div>
+    </article>
+  </section>
+</main>
+
+<footer class="foot wrap" id="contact">
+  <div class="foot-grid">
+    <div>
+      <span class="label eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+    </div>
+    <div>
+      <div class="contact-row">
+        <span class="email" id="foot-email">caleb.garrard@gmail.com</span>
+        <button class="btn" type="button" id="copy-foot" data-copy="caleb.garrard@gmail.com" data-target="foot-email">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <p class="small">Evans, Georgia. Also at <a href="https://ranchers.com" target="_blank" rel="noopener">ranchers.com</a>, <a href="https://infocus.church" target="_blank" rel="noopener">infocus.church</a> and <a href="https://afterwordai.com" target="_blank" rel="noopener">afterwordai.com</a>.</p>
+    </div>
+  </div>
+  <p class="small credits">Ranchers photos and footage come from the PPA Tour and MLP broadcasts. Third Shot screens use sample data. Updated October 2026.</p>
+</footer>
+
+<dialog id="viewer" aria-labelledby="viewer-cap">
+  <div class="viewer-bar">
+    <p class="viewer-cap" id="viewer-cap"></p>
+    <span class="viewer-count" id="viewer-count"></span>
+    <button type="button" class="vbtn" id="viewer-close">Close</button>
+  </div>
+  <div class="viewer-stage"><img id="viewer-img" alt=""></div>
+  <div class="viewer-nav">
+    <button type="button" class="vbtn" id="viewer-prev">← Previous</button>
+    <button type="button" class="vbtn" id="viewer-next">Next →</button>
+  </div>
+</dialog>
+
+<script>
+  // Copy buttons: clipboard when allowed, otherwise select the address so it can be copied by hand.
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const done = (label) => {
+        btn.textContent = label;
+        setTimeout(() => { btn.textContent = "Copy email"; }, 2000);
+      };
+      const selectIt = () => {
+        const el = document.getElementById(btn.dataset.target);
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        done("Selected");
+      };
+      try {
+        navigator.clipboard.writeText(btn.dataset.copy).then(() => done("Copied"), selectIt);
+      } catch (e) {
+        selectIt();
+      }
+    });
+  });
+
+  // Only one video plays at a time.
+  document.addEventListener("play", (e) => {
+    document.querySelectorAll("video").forEach((v) => { if (v !== e.target) v.pause(); });
+  }, true);
+
+  // Image viewer: opens the full-size image, steps through the pieces in the same gallery.
+  (() => {
+    const dlg = document.getElementById("viewer");
+    if (!dlg || typeof dlg.showModal !== "function") return;
+    const img = document.getElementById("viewer-img");
+    const cap = document.getElementById("viewer-cap");
+    const count = document.getElementById("viewer-count");
+    const prev = document.getElementById("viewer-prev");
+    const next = document.getElementById("viewer-next");
+    let group = [];
+    let i = 0;
+    const show = () => {
+      const thumb = group[i].querySelector("img");
+      img.src = thumb.currentSrc || thumb.src;
+      img.alt = thumb.alt;
+      cap.textContent = group[i].dataset.cap;
+      count.textContent = group.length > 1 ? `${i + 1} / ${group.length}` : "";
+      prev.hidden = next.hidden = group.length < 2;
+    };
+    const step = (d) => { i = (i + d + group.length) % group.length; show(); };
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest(".zoom");
+      if (!b) return;
+      group = [...b.closest(".media").querySelectorAll(".zoom")];
+      i = group.indexOf(b);
+      show();
+      dlg.showModal();
+    });
+    prev.addEventListener("click", () => step(-1));
+    next.addEventListener("click", () => step(1));
+    document.getElementById("viewer-close").addEventListener("click", () => dlg.close());
+    dlg.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener("close", () => img.removeAttribute("src"));
+  })();
+</script>
+
+</body>
+</html>
