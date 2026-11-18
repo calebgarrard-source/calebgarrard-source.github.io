@@ -11,6 +11,11 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://calebgarrard-source.github.io/">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f2f4f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1319" media="(prefers-color-scheme: dark)">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Caleb Garrard</title>
 <meta name="description" content="Caleb Garrard: Texas Ranchers GM, head coach and marketing director, worship leader at In Focus Church, founder of Afterword.">
@@ -43,12 +48,12 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --paper: #0e1319; --surface: #151c24; --ink: #e8ecf1; --muted: #9ba7b5;
-      --rule: #28323d; --accent: #ff6b57; --chip: #1e2731; color-scheme: dark;
+      --rule: #28323d; --accent: #e8503c; --chip: #1e2731; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --paper: #0e1319; --surface: #151c24; --ink: #e8ecf1; --muted: #9ba7b5;
-    --rule: #28323d; --accent: #ff6b57; --chip: #1e2731; color-scheme: dark;
+    --rule: #28323d; --accent: #e8503c; --chip: #1e2731; color-scheme: dark;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -72,8 +77,12 @@
   a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   a:hover { color: var(--accent); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  ::selection { background: var(--accent); color: var(--paper); }
+  .skip { position: absolute; left: 12px; top: -60px; z-index: 20; padding: 10px 12px; background: var(--ink); color: var(--paper); text-decoration: none; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase; }
+  .skip:focus { top: calc(env(safe-area-inset-top, 0px) + 8px); }
+  .skip:hover { color: var(--paper); }
   h1, h2, h3, h4 { text-wrap: balance; }
-  p { text-wrap: pretty; }
+  p, dd, figcaption, .cap { text-wrap: pretty; }
 
   .label {
     font-family: var(--mono); font-size: 0.68rem; font-weight: 500;
@@ -119,7 +128,7 @@
   .proof { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
   .proof div {
     border-top: 1px solid var(--rule); padding: 12px 0; min-width: 0;
-    display: grid; grid-template-columns: 8.2rem minmax(0, 1fr); gap: 14px; align-items: baseline;
+    display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 14px; align-items: baseline;
   }
   .proof dt {
     font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(1.6rem, 2.6vw, 2.2rem);
@@ -170,7 +179,7 @@
     display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
     gap: 6px 24px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
   }
-  .org-head h3 {
+  .org-head h2, .org-head h3 {
     font-family: var(--display); font-stretch: 112%; font-weight: 760; font-size: clamp(1.6rem, 3.4vw, 2.6rem);
     line-height: 1.02; letter-spacing: -0.01em; margin: 0;
   }
@@ -184,10 +193,10 @@
     gap: 2px 16px; border-bottom: 1px solid var(--rule); padding-bottom: 7px;
   }
   .roles b { font-weight: 600; }
-  .roles span { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .roles span { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; text-align: right; text-wrap: balance; }
   .roles.spec span { text-transform: uppercase; }
-  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 6px; }
-  .links a { color: var(--accent); text-decoration: none; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 2px; }
+  .links a { color: var(--accent); text-decoration: none; padding-block: 4px; }
   .links a:hover { text-decoration: underline; }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 24px; margin: 26px 0 0; }
   .stats div { border-top: 2px solid var(--ink); padding-top: 10px; min-width: 0; }
@@ -197,6 +206,8 @@
   .stats dt { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
   .stats dd, .event dd { margin: 6px 0 0; font-size: 0.84rem; color: var(--muted); line-height: 1.35; }
   .source { font-size: 0.76rem; color: var(--muted); margin: 12px 0 0; }
+  .source a { display: inline-block; padding-block: 4px; margin-block: -4px; }
+  .nowrap { white-space: nowrap; }
 
   /* Projects */
   .project { margin-top: clamp(32px, 4.5vw, 56px); }
@@ -271,16 +282,25 @@
     .media.tight { --row-h: 160px; }
     .world-head, .org-intro, .project-head, .foot-grid { grid-template-columns: minmax(0, 1fr); }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 720px) {
     .mark { display: none; }
     .bar nav { justify-content: flex-start; gap: 2px 14px; }
+  }
+  @media (max-width: 600px) {
     :root { --gap: 8px; }
+    .bar .wrap { padding-block: 2px; }
+    .bar nav { flex: 1; display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 8px 12px; padding-block: 2px; }
+    .bar nav a { padding-block: 6px; }
+    [id] { scroll-margin-top: 88px; }
+    .btn { padding: 10px 12px; }
+    .media { row-gap: 18px; }
   }
 </style>
 
 </head>
 <body>
 <header class="bar">
+  <a class="skip" href="#top">Skip to the work</a>
   <div class="wrap">
     <a class="mark" href="#top">Caleb Garrard</a>
     <nav class="label" aria-label="Sections">
@@ -305,16 +325,16 @@
         <div class="contact-row">
           <span class="email" id="hero-email">caleb.garrard@gmail.com</span>
           <button class="btn" type="button" id="copy-hero" data-copy="caleb.garrard@gmail.com" data-target="hero-email">Copy email</button>
-          <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <dl class="proof">
-        <div><dt>1.3M+</dt><dd>Instagram views on Texas Ranchers reels, May–Oct 2026</dd></div>
+        <div><dt>1.3M+</dt><dd>Instagram views on Texas Ranchers reels, <span class="nowrap">May–Oct 2026</span></dd></div>
         <div><dt>54M</dt><dd>social impressions at the 2025 Jenius Bank Pickleball World Championships</dd></div>
         <div><dt>880K+</dt><dd>streams across six In Focus Worship releases</dd></div>
       </dl>
     </div>
-    <div class="media strip"><a class="m" href="#ranchers" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" alt="Texas Ranchers" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Texas Ranchers</span></a><a class="m" href="#ranchers" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="Texas Ranchers" decoding="async"><span class="cap"><span class="fmt">3:4 feed</span>Texas Ranchers</span></a><a class="m" href="#grace-covenant" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" alt="Grace Covenant" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Grace Covenant</span></a><a class="m" href="#afterword" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="Afterword" decoding="async"><span class="cap"><span class="fmt">App</span>Afterword</span></a><a class="m" href="#in-focus" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><img src="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" alt="In Focus Church" decoding="async"><span class="cap"><span class="fmt">16:9 film</span>In Focus Church</span></a></div>
+    <div class="media strip"><a class="m" href="#ranchers" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" alt="" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Texas Ranchers</span></a><a class="m" href="#ranchers" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="" decoding="async"><span class="cap"><span class="fmt">3:4 feed</span>Texas Ranchers</span></a><a class="m" href="#grace-covenant" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><img src="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" alt="" decoding="async"><span class="cap"><span class="fmt">9:16 reel</span>Grace Covenant</span></a><a class="m" href="#afterword" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="" decoding="async"><span class="cap"><span class="fmt">App</span>Afterword</span></a><a class="m" href="#in-focus" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><img src="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" alt="" decoding="async"><span class="cap"><span class="fmt">16:9 film</span>In Focus Church</span></a></div>
   </section>
 
   <!-- ===================== MATCH DAYS ===================== -->
@@ -336,7 +356,7 @@
         </ul>
         <div>
           <p>I run the roster, coach the team and lead marketing for one of MLP's founding teams. In 2026 we went 16–12, reached the quarterfinals as the 8th seed and took third at our home event, MLP Austin. I also relaunched ranchers.com in September 2026.</p>
-          <div class="links label"><a href="https://ranchers.com" target="_blank" rel="noopener">ranchers.com ↗</a></div>
+          <div class="links label"><a href="https://ranchers.com" target="_blank" rel="noopener">ranchers.com <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
       <dl class="stats">
@@ -355,7 +375,7 @@
             <p class="credit">Photos and footage: PPA Tour.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-tour-recap.mp4" poster="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers On Tour recap"></video><figcaption><span class="fmt">9:16 reel</span>Ranchers On Tour recap</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Kaitlyn Christian, gold in Las Vegas" aria-label="View larger: Kaitlyn Christian, gold in Las Vegas"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="Kaitlyn Christian, gold in Las Vegas" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Kaitlyn Christian, gold in Las Vegas</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Eric Oncins, gold in Virginia Beach" aria-label="View larger: Eric Oncins, gold in Virginia Beach"><img src="assets/ranchers-tour-eric-gold.jpg" width="1080" height="1440" alt="Eric Oncins, gold in Virginia Beach" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Eric Oncins, gold in Virginia Beach</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><button class="zoom" type="button" data-cap="Match-day schedule" aria-label="View larger: Match-day schedule"><img src="assets/ranchers-tour-oncins-r32.jpg" width="900" height="1600" alt="Match-day schedule" loading="lazy" decoding="async"></button><figcaption><span class="fmt">9:16 story</span>Match-day schedule</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Semifinal poster, Arizona Open" aria-label="View larger: Semifinal poster, Arizona Open"><img src="assets/ranchers-gameday-az.jpg" width="1280" height="1600" alt="Semifinal poster, Arizona Open" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 poster</span>Semifinal poster, Arizona Open</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-tour-recap.mp4" data-poster="assets/ranchers-tour-recap-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers On Tour recap"></video><figcaption><span class="fmt">9:16 reel</span>Ranchers On Tour recap</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Kaitlyn Christian, gold in Las Vegas" aria-label="View larger: Kaitlyn Christian, gold in Las Vegas"><img src="assets/ranchers-tour-christian-gold.jpg" width="1080" height="1440" alt="Kaitlyn Christian, gold in Las Vegas" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Kaitlyn Christian, gold in Las Vegas</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Eric Oncins, gold in Virginia Beach" aria-label="View larger: Eric Oncins, gold in Virginia Beach"><img src="assets/ranchers-tour-eric-gold.jpg" width="1080" height="1440" alt="Eric Oncins, gold in Virginia Beach" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Eric Oncins, gold in Virginia Beach</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Semifinal poster, Arizona Open" aria-label="View larger: Semifinal poster, Arizona Open"><img src="assets/ranchers-gameday-az.jpg" width="1280" height="1600" alt="Semifinal poster, Arizona Open" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 poster</span>Semifinal poster, Arizona Open</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -366,7 +386,7 @@
             <p class="credit">Footage: MLP broadcast.</p>
           </div>
         </div>
-        <div class="media big"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-breakdown-alw.mp4" poster="assets/ranchers-breakdown-alw-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="How We Beat ALW"></video><figcaption><span class="fmt">9:16</span>How We Beat ALW</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="YouTube cover" aria-label="View larger: YouTube cover"><img src="assets/ranchers-breakdown-alw-cover.jpg" width="1600" height="900" alt="YouTube cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>YouTube cover</figcaption></figure></div>
+        <div class="media big"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-breakdown-alw.mp4" data-poster="assets/ranchers-breakdown-alw-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="How We Beat ALW"></video><figcaption><span class="fmt">9:16</span>How We Beat ALW</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="YouTube cover" aria-label="View larger: YouTube cover"><img src="assets/ranchers-breakdown-alw-cover.jpg" width="1600" height="900" alt="YouTube cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>YouTube cover</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -376,7 +396,7 @@
             <p>Our home event. I led the marketing and designed the on-site signage, adapting the ticket campaign art by our content agency, Rayos, into wayfinding, store and VIP posters, flags, an entry A-frame and sidewalk decals. Ranchers reels drew 240K+ Instagram views that week, and our partner BAiO drew an estimated 40M+ brand impressions and 1,000+ sign-ups at the event.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/mlp-atx-invite.mp4" poster="assets/mlp-atx-invite-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Blooper invite reel"></video><figcaption><span class="fmt">9:16 reel</span>Blooper invite reel</figcaption></figure><figure class="m" style="--ar:0.7856;flex:78.6 1 calc(0.7856 * var(--row-h));max-width:calc(0.7856 * var(--row-max))"><button class="zoom" type="button" data-cap="Wayfinding poster" aria-label="View larger: Wayfinding poster"><img src="assets/mlp-atx-wayfinding.jpg" width="1257" height="1600" alt="Wayfinding poster" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Wayfinding poster</figcaption></figure><figure class="m" style="--ar:0.7856;flex:78.6 1 calc(0.7856 * var(--row-h));max-width:calc(0.7856 * var(--row-max))"><button class="zoom" type="button" data-cap="Venue poster" aria-label="View larger: Venue poster"><img src="assets/mlp-atx-poster.jpg" width="1257" height="1600" alt="Venue poster" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Venue poster</figcaption></figure><figure class="m" style="--ar:0.7778;flex:77.8 1 calc(0.7778 * var(--row-h));max-width:calc(0.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Signage key" aria-label="View larger: Signage key"><img src="assets/mlp-atx-signage-key.jpg" width="1400" height="1800" alt="Signage key" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Signage key</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/mlp-atx-invite.mp4" data-poster="assets/mlp-atx-invite-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Blooper invite reel"></video><figcaption><span class="fmt">9:16 reel</span>Blooper invite reel</figcaption></figure><figure class="m" style="--ar:0.7856;flex:78.6 1 calc(0.7856 * var(--row-h));max-width:calc(0.7856 * var(--row-max))"><button class="zoom" type="button" data-cap="Wayfinding poster" aria-label="View larger: Wayfinding poster"><img src="assets/mlp-atx-wayfinding.jpg" width="1257" height="1600" alt="Wayfinding poster" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Wayfinding poster</figcaption></figure><figure class="m" style="--ar:0.7856;flex:78.6 1 calc(0.7856 * var(--row-h));max-width:calc(0.7856 * var(--row-max))"><button class="zoom" type="button" data-cap="Venue poster" aria-label="View larger: Venue poster"><img src="assets/mlp-atx-poster.jpg" width="1257" height="1600" alt="Venue poster" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Venue poster</figcaption></figure><figure class="m" style="--ar:0.7778;flex:77.8 1 calc(0.7778 * var(--row-h));max-width:calc(0.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Signage key" aria-label="View larger: Signage key"><img src="assets/mlp-atx-signage-key.jpg" width="1400" height="1800" alt="Signage key" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Print</span>Signage key</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -386,7 +406,7 @@
             <p>A full launch package for the Offseason Collection: 7 reels, 2 carousels, 9 feed posts, 17 ads, 5 stories and 59 product cutouts, scheduled through November 19.</p>
           </div>
         </div>
-        <div class="media tight"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-merch-reel.mp4" poster="assets/ranchers-merch-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Offseason Collection reel"></video><figcaption><span class="fmt">9:16 reel</span>Offseason Collection reel</figcaption></figure><figure class="m" style="--ar:3.9430;flex:394.3 1 calc(3.9430 * var(--row-h));max-width:calc(3.9430 * var(--row-max))"><button class="zoom" type="button" data-cap="The seven-reel lineup" aria-label="View larger: The seven-reel lineup"><img src="assets/ranchers-merch-lineup.jpg" width="2212" height="561" alt="The seven-reel lineup" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Covers</span>The seven-reel lineup</figcaption></figure></div>
+        <div class="media tight"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-merch-reel.mp4" data-poster="assets/ranchers-merch-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Offseason Collection reel"></video><figcaption><span class="fmt">9:16 reel</span>Offseason Collection reel</figcaption></figure><figure class="m" style="--ar:3.9430;flex:394.3 1 calc(3.9430 * var(--row-h));max-width:calc(3.9430 * var(--row-max))"><button class="zoom" type="button" data-cap="The seven-reel lineup" aria-label="View larger: The seven-reel lineup"><img src="assets/ranchers-merch-lineup.jpg" width="2212" height="561" alt="The seven-reel lineup" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Covers</span>The seven-reel lineup</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -396,7 +416,7 @@
             <p>Weekly and season-long storytelling: the Ranchers Index and a By the Numbers recap of 2026 (37 matches, 153 games, 10 Dreambreakers, 12,224 miles, 8 events in 6 states). Plus community events, including For Her, We Rally, a breast cancer benefit on October 17, and the Texas MiLP State Championship on November 14–15.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="2026 by the numbers" aria-label="View larger: 2026 by the numbers"><img src="assets/ranchers-by-the-numbers.jpg" width="1080" height="1350" alt="2026 by the numbers" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>2026 by the numbers</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-index-mover.mp4" poster="assets/ranchers-index-mover-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers Index, biggest mover"></video><figcaption><span class="fmt">9:16</span>Ranchers Index, biggest mover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="For Her, We Rally" aria-label="View larger: For Her, We Rally"><img src="assets/ranchers-for-her.jpg" width="1080" height="1350" alt="For Her, We Rally" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 feed</span>For Her, We Rally</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Texas MiLP State Championship" aria-label="View larger: Texas MiLP State Championship"><img src="assets/ranchers-state-champs.jpg" width="1080" height="1440" alt="Texas MiLP State Championship" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Texas MiLP State Championship</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="2026 by the numbers" aria-label="View larger: 2026 by the numbers"><img src="assets/ranchers-by-the-numbers.jpg" width="1080" height="1350" alt="2026 by the numbers" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>2026 by the numbers</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/ranchers-index-mover.mp4" data-poster="assets/ranchers-index-mover-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Ranchers Index, biggest mover"></video><figcaption><span class="fmt">9:16</span>Ranchers Index, biggest mover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="For Her, We Rally" aria-label="View larger: For Her, We Rally"><img src="assets/ranchers-for-her.jpg" width="1080" height="1350" alt="For Her, We Rally" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 feed</span>For Her, We Rally</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Texas MiLP State Championship" aria-label="View larger: Texas MiLP State Championship"><img src="assets/ranchers-state-champs.jpg" width="1080" height="1440" alt="Texas MiLP State Championship" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 feed</span>Texas MiLP State Championship</figcaption></figure></div>
       </div>
     </article>
 
@@ -411,7 +431,7 @@
         </ul>
         <div>
           <p>Tactical breakdowns of pro matches on my own accounts. Each one is my read of the match, my design and my voice: the pattern, the broadcast clips, animated court diagrams and a voiceover, published as an Instagram carousel and as one voiced video for Reels, TikTok, Shorts and X.</p>
-          <div class="links label"><a href="https://www.instagram.com/caleb_garrard/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.tiktok.com/@calebgarrard" target="_blank" rel="noopener">TikTok ↗</a></div>
+          <div class="links label"><a href="https://www.instagram.com/caleb_garrard/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a><a href="https://www.tiktok.com/@calebgarrard" target="_blank" rel="noopener">TikTok <span aria-hidden="true">↗</span></a><a href="https://www.youtube.com/@calebgarrard" target="_blank" rel="noopener">YouTube <span aria-hidden="true">↗</span></a><a href="https://x.com/Caleb_Garrard" target="_blank" rel="noopener">X <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
 
@@ -419,24 +439,24 @@
         <div class="project-head">
           <div><h4>Every ball to Jorja? Who the Shock hit to, twice</h4><span class="label when">Nov 11, 2026 · MLP women's doubles, Mid-Season final and Finals</span></div>
           <div>
-            <p>Everyone said Anna Leigh Waters got frozen out of the MLP Mid-Season final, so I counted every shot of that women's doubles game and of the rematch in the MLP Finals: 1,039 shots. In the Mid-Season final, 189 of the St. Louis Shock's 236 shots after the serve went to Jorja Johnson, she ended 13 rallies with an error and the Shock won 11-6. In the Finals the Shock went back to the same plan, 156 of 219, but she ended 5 rallies with an error and the 5s won 11-9. A twelve-slide carousel with shot counts, charts of where every ball landed, heat maps and broadcast clips.</p>
+            <p>Everyone said Anna Leigh Waters got frozen out of the MLP Mid-Season final, so I counted every shot of that women's doubles game and of the rematch in the MLP Finals: 1,039 shots. In the Mid-Season final, 189 of the St. Louis Shock's 236 shots after the serve went to Jorja Johnson. She ended 13 rallies with an error, and the Shock won 11-6. In the Finals the Shock went back to the same plan, 156 of 219, but she ended 5 rallies with an error and the 5s won 11-9. A twelve-slide carousel, posted as ten on Instagram, with shot counts, charts of where every ball landed, heat maps and broadcast clips, and a 96-second voiced video.</p>
             <p class="credit">Footage: MLP broadcast. Every shot counted by hand from the broadcast.</p>
-            <div class="links label"><a href="https://www.instagram.com/caleb_garrard/" target="_blank" rel="noopener">Instagram ↗</a></div>
+            <div class="links label"><a href="https://www.instagram.com/p/DfnNr6zEYr6/" target="_blank" rel="noopener">Instagram post <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-shock-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-shock-count.mp4" poster="assets/bd-shock-count-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Every shot after the serve, counted"></video><figcaption><span class="fmt">4:5 loop</span>Every shot after the serve, counted</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Where every ball went" aria-label="View larger: Where every ball went"><img src="assets/bd-shock-chart.jpg" width="1080" height="1350" alt="Where every ball went" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Where every ball went</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-shock-finals.mp4" poster="assets/bd-shock-finals-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="She kept sending them back"></video><figcaption><span class="fmt">4:5 clip</span>She kept sending them back</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-shock-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-shock-count.mp4" data-poster="assets/bd-shock-count-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Every shot after the serve, counted"></video><figcaption><span class="fmt">4:5 loop</span>Every shot after the serve, counted</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Where every ball went" aria-label="View larger: Where every ball went"><img src="assets/bd-shock-chart.jpg" width="1080" height="1350" alt="Where every ball went" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Where every ball went</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-shock-finals.mp4" data-poster="assets/bd-shock-finals-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="She kept sending them back"></video><figcaption><span class="fmt">4:5 clip</span>She kept sending them back</figcaption></figure></div>
       </div>
 
       <div class="project">
         <div class="project-head">
           <div><h4>One shift flipped the Worlds final</h4><span class="label when">Nov 9, 2026 · Men's doubles final, World Championships</span></div>
           <div>
-            <p>JW Johnson and Tama Shimabukuro lost the first two games of the men's doubles final to Christian Alshon and Andrei Daescu, then won the next three. The breakdown shows what changed from game 3 on: relatively dead, shallow dinks, many of them to Christian's backhand, which are hard to attack and fed JW's and Tama's counters. Published the morning after the final as a ten-slide carousel, an 89-second voiced video and a talking-head reel.</p>
+            <p>JW Johnson and Tama Shimabukuro lost the first two games of the men's doubles final to Christian Alshon and Andrei Daescu, then won the next three. The breakdown shows what changed from game 3 on: relatively dead, shallow dinks, many of them to Christian's backhand, which are hard to attack and fed JW's and Tama's counters. Published the morning after the final as a ten-slide carousel and an 89-second voiced video, followed by a talking-head reel.</p>
             <p class="credit">Footage: PPA Tour broadcast.</p>
-            <div class="links label"><a href="https://www.instagram.com/p/DfhjRi1AJQ4/" target="_blank" rel="noopener">Instagram post ↗</a></div>
+            <div class="links label"><a href="https://www.instagram.com/p/DfhjRi1AJQ4/" target="_blank" rel="noopener">Instagram post <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-worlds-video.mp4" poster="assets/bd-worlds-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-worlds-talking.mp4" poster="assets/bd-worlds-talking-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Talking-head version"></video><figcaption><span class="fmt">9:16 reel</span>Talking-head version</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="The shift, games 1–2 against games 3–5" aria-label="View larger: The shift, games 1–2 against games 3–5"><img src="assets/bd-worlds-shift.jpg" width="1080" height="1350" alt="The shift, games 1–2 against games 3–5" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>The shift, games 1–2 against games 3–5</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-worlds-why.mp4" poster="assets/bd-worlds-why-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why it works"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why it works</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Recap" aria-label="View larger: Recap"><img src="assets/bd-worlds-recap.jpg" width="1080" height="1350" alt="Recap" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Recap</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-worlds-video.mp4" data-poster="assets/bd-worlds-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-worlds-talking.mp4" data-poster="assets/bd-worlds-talking-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Talking-head version"></video><figcaption><span class="fmt">9:16 reel</span>Talking-head version</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="The shift, games 1–2 against games 3–5" aria-label="View larger: The shift, games 1–2 against games 3–5"><img src="assets/bd-worlds-shift.jpg" width="1080" height="1350" alt="The shift, games 1–2 against games 3–5" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>The shift, games 1–2 against games 3–5</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-worlds-why.mp4" data-poster="assets/bd-worlds-why-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why it works"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why it works</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Recap" aria-label="View larger: Recap"><img src="assets/bd-worlds-recap.jpg" width="1080" height="1350" alt="Recap" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Recap</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -445,10 +465,10 @@
           <div>
             <p>At the World Championships, Rachel Rohrabacher and Christian Alshon played Elliott Schupp and Kiora Kunimoto in the mixed round of 32. The breakdown covers how they tried to neutralize him and make his movement and aggression less effective: the drop to Kiora's right foot, Christian going behind him, two hands on the counter and a slow roll at his backhand. A nine-slide carousel and a two-minute voiced video with captions that follow the voiceover.</p>
             <p class="credit">Footage: PPA Tour broadcast.</p>
-            <div class="links label"><a href="https://www.instagram.com/p/DfavmiVDaje/" target="_blank" rel="noopener">Instagram post ↗</a></div>
+            <div class="links label"><a href="https://www.instagram.com/p/DfavmiVDaje/" target="_blank" rel="noopener">Instagram post <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-elliott-video.mp4" poster="assets/bd-elliott-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-elliott-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-elliott-spot.mp4" poster="assets/bd-elliott-spot-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why that spot"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why that spot</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Recap" aria-label="View larger: Recap"><img src="assets/bd-elliott-recap.jpg" width="1080" height="1350" alt="Recap" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Recap</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-elliott-video.mp4" data-poster="assets/bd-elliott-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-elliott-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-elliott-spot.mp4" data-poster="assets/bd-elliott-spot-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why that spot"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why that spot</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Recap" aria-label="View larger: Recap"><img src="assets/bd-elliott-recap.jpg" width="1080" height="1350" alt="Recap" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Recap</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -457,10 +477,10 @@
           <div>
             <p>I captained Europe East against Team USA at the MLP Nations Cup and saw it from the other bench: Tyra Black now steps slightly off the line and attacks good drops off the bounce, off her backhand and her forehand, instead of conceding the kitchen. An eight-slide carousel and a 56-second voiced video.</p>
             <p class="credit">Footage: MLP broadcast.</p>
-            <div class="links label"><a href="https://www.instagram.com/p/DfVl4ybHEaK/" target="_blank" rel="noopener">Instagram post ↗</a></div>
+            <div class="links label"><a href="https://www.instagram.com/p/DfVl4ybHEaK/" target="_blank" rel="noopener">Instagram post <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-tyra-video.mp4" poster="assets/bd-tyra-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-tyra-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-tyra-scary.mp4" poster="assets/bd-tyra-scary-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why it&#x27;s scary"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why it&#x27;s scary</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Her three weapons" aria-label="View larger: Her three weapons"><img src="assets/bd-tyra-weapons.jpg" width="1080" height="1350" alt="Her three weapons" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Her three weapons</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/bd-tyra-video.mp4" data-poster="assets/bd-tyra-video-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="The full breakdown, with voiceover"></video><figcaption><span class="fmt">9:16</span>The full breakdown, with voiceover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Cover" aria-label="View larger: Cover"><img src="assets/bd-tyra-cover.jpg" width="1080" height="1350" alt="Cover" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Cover</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><video src="assets/bd-tyra-scary.mp4" data-poster="assets/bd-tyra-scary-poster.jpg" width="864" height="1080" controls playsinline preload="none" aria-label="Animated diagram: why it&#x27;s scary"></video><figcaption><span class="fmt">4:5 loop</span>Animated diagram: why it&#x27;s scary</figcaption></figure><figure class="m" style="--ar:0.8000;flex:80.0 1 calc(0.8000 * var(--row-h));max-width:calc(0.8000 * var(--row-max))"><button class="zoom" type="button" data-cap="Her three weapons" aria-label="View larger: Her three weapons"><img src="assets/bd-tyra-weapons.jpg" width="1080" height="1350" alt="Her three weapons" loading="lazy" decoding="async"></button><figcaption><span class="fmt">4:5 carousel</span>Her three weapons</figcaption></figure></div>
       </div>
     </article>
 
@@ -484,9 +504,9 @@
           <dl>
             <div><dt class="lead">54M</dt><dd>impressions on official social handles</dd></div>
             <div><dt>60,000+</dt><dd>fans at Brookhaven Country Club, a record</dd></div>
-            <div><dt>70M</dt><dd>minutes viewed on Pickleballtv, a record</dd></div>
+            <div><dt>70M</dt><dd>minutes viewed on PickleballTV, a record</dd></div>
           </dl>
-          <p class="source"><a href="https://www.ppatour.com/2025-jenius-bank-pickleball-world-championships-break-attendance-participation-and-viewership-records/" target="_blank" rel="noopener">PPA Tour, Nov 19, 2025 ↗</a></p>
+          <p class="source"><a href="https://www.ppatour.com/2025-jenius-bank-pickleball-world-championships-break-attendance-participation-and-viewership-records/" target="_blank" rel="noopener">PPA Tour, Nov 19, 2025 <span aria-hidden="true">↗</span></a></p>
         </section>
         <section class="event" aria-labelledby="ev-finals">
           <span class="label when">Aug 22–24, 2025 · New York City</span>
@@ -496,7 +516,7 @@
             <div><dt>436K</dt><dd>average viewers for Finals Match 1 on CBS, MLP's most-watched match at the time</dd></div>
             <div><dt>~1.5M</dt><dd>YouTube views over the event week</dd></div>
           </dl>
-          <p class="source"><a href="https://majorleaguepickleball.co/news/major-league-pickleball-generates-robust-growth-across-all-business-areas-in-first-post-merger-season/" target="_blank" rel="noopener">MLP, Sep 16, 2025 ↗</a></p>
+          <p class="source"><a href="https://majorleaguepickleball.co/news/major-league-pickleball-generates-robust-growth-across-all-business-areas-in-first-post-merger-season/" target="_blank" rel="noopener">MLP, Sep 16, 2025 <span aria-hidden="true">↗</span></a></p>
         </section>
         <section class="event" aria-labelledby="ev-texas">
           <span class="label when">2025 · PPA Tour</span>
@@ -541,9 +561,9 @@
         <div>
           <p>I lead worship every weekend and own everything made for and from each service: series branding, service visuals, sermon uploads, clips, Shorts, Reels, YouTube and social.</p>
           <div class="links label">
-            <a href="https://infocus.church" target="_blank" rel="noopener">infocus.church ↗</a>
-            <a href="https://www.youtube.com/@infocuschurch" target="_blank" rel="noopener">YouTube ↗</a>
-            <a href="https://www.instagram.com/infocuschurch/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="https://infocus.church" target="_blank" rel="noopener">infocus.church <span aria-hidden="true">↗</span></a>
+            <a href="https://www.youtube.com/@infocuschurch" target="_blank" rel="noopener">YouTube <span aria-hidden="true">↗</span></a>
+            <a href="https://www.instagram.com/infocuschurch/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -555,7 +575,7 @@
             <p>A two-tone blue brand carried through a rebuilt Squarespace site and keynote-style launch films in 16:9, 9:16 and 3:1. The new site went live October 27, 2026.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/ifc-site-reveal.mp4" poster="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Website launch film"></video><figcaption><span class="fmt">16:9 film</span>Website launch film</figcaption></figure><figure class="m" style="--ar:0.4570;flex:45.7 1 calc(0.4570 * var(--row-h));max-width:calc(0.4570 * var(--row-max))"><button class="zoom" type="button" data-cap="Homepage" aria-label="View larger: Homepage"><img src="assets/ifc-site-home.jpg" width="914" height="2000" alt="Homepage" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>Homepage</figcaption></figure><figure class="m" style="--ar:0.8329;flex:83.3 1 calc(0.8329 * var(--row-h));max-width:calc(0.8329 * var(--row-max))"><button class="zoom" type="button" data-cap="Share images for every page" aria-label="View larger: Share images for every page"><img src="assets/ifc-site-share-grid.jpg" width="1166" height="1400" alt="Share images for every page" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Social</span>Share images for every page</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/ifc-site-reveal.mp4" data-poster="assets/ifc-site-reveal-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Website launch film"></video><figcaption><span class="fmt">16:9 film</span>Website launch film</figcaption></figure><figure class="m" style="--ar:0.4570;flex:45.7 1 calc(0.4570 * var(--row-h));max-width:calc(0.4570 * var(--row-max))"><button class="zoom" type="button" data-cap="Homepage" aria-label="View larger: Homepage"><img src="assets/ifc-site-home.jpg" width="914" height="2000" alt="Homepage" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>Homepage</figcaption></figure><figure class="m" style="--ar:0.8329;flex:83.3 1 calc(0.8329 * var(--row-h));max-width:calc(0.8329 * var(--row-max))"><button class="zoom" type="button" data-cap="Share images for every page" aria-label="View larger: Share images for every page"><img src="assets/ifc-site-share-grid.jpg" width="1166" height="1400" alt="Share images for every page" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Social</span>Share images for every page</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -565,7 +585,7 @@
             <p>One retro pixel look across 3:1 LED slides, lower thirds, YouTube thumbnails, Instagram carousels and reels with animated captions. The weekly pipeline behind it became Afterword.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-hard-things.mp4" poster="assets/jsw-reel-hard-things-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 3 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 3 reel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Series title" aria-label="View larger: Series title"><img src="assets/jsw-title.jpg" width="1600" height="900" alt="Series title" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Series title</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-treasure.mp4" poster="assets/jsw-reel-treasure-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 2 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 2 reel</figcaption></figure><figure class="m" style="--ar:1.6332;flex:163.3 1 calc(1.6332 * var(--row-h));max-width:calc(1.6332 * var(--row-max))"><button class="zoom" type="button" data-cap="Sunday LED slides" aria-label="View larger: Sunday LED slides"><img src="assets/jsw-overview.jpg" width="1140" height="698" alt="Sunday LED slides" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:1 LED</span>Sunday LED slides</figcaption></figure><figure class="m" style="--ar:1.8018;flex:180.2 1 calc(1.8018 * var(--row-h));max-width:calc(1.8018 * var(--row-max))"><button class="zoom" type="button" data-cap="Thumbnails in the feed" aria-label="View larger: Thumbnails in the feed"><img src="assets/jsw-thumbs.jpg" width="1600" height="888" alt="Thumbnails in the feed" loading="lazy" decoding="async"></button><figcaption><span class="fmt">YouTube</span>Thumbnails in the feed</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-hard-things.mp4" data-poster="assets/jsw-reel-hard-things-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 3 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 3 reel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Series title" aria-label="View larger: Series title"><img src="assets/jsw-title.jpg" width="1600" height="900" alt="Series title" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Series title</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/jsw-reel-treasure.mp4" data-poster="assets/jsw-reel-treasure-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Week 2 reel"></video><figcaption><span class="fmt">9:16 reel</span>Week 2 reel</figcaption></figure><figure class="m" style="--ar:1.6332;flex:163.3 1 calc(1.6332 * var(--row-h));max-width:calc(1.6332 * var(--row-max))"><button class="zoom" type="button" data-cap="Sunday LED slides" aria-label="View larger: Sunday LED slides"><img src="assets/jsw-overview.jpg" width="1140" height="698" alt="Sunday LED slides" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:1 LED</span>Sunday LED slides</figcaption></figure><figure class="m" style="--ar:1.8018;flex:180.2 1 calc(1.8018 * var(--row-h));max-width:calc(1.8018 * var(--row-max))"><button class="zoom" type="button" data-cap="Thumbnails in the feed" aria-label="View larger: Thumbnails in the feed"><img src="assets/jsw-thumbs.jpg" width="1600" height="888" alt="Thumbnails in the feed" loading="lazy" decoding="async"></button><figcaption><span class="fmt">YouTube</span>Thumbnails in the feed</figcaption></figure></div>
       </div>
 
       <div class="project">
@@ -595,8 +615,8 @@
           <div>
             <p>Worship leader, songwriter and producer for In Focus Worship: six releases from 2019 to 2023 with 880K+ streams, including The Garden (This Moment with God) with Integrity Music. I also launched the Live It YouTube series and the In Focus Church Podcast.</p>
             <div class="links label">
-              <a href="https://youtube.com/playlist?list=PLVpASzij087qi9VrcoMK8pDzmhP1K-3S2" target="_blank" rel="noopener">Live It ↗</a>
-              <a href="https://www.buzzsprout.com/2658873" target="_blank" rel="noopener">Podcast ↗</a>
+              <a href="https://youtube.com/playlist?list=PLVpASzij087qi9VrcoMK8pDzmhP1K-3S2" target="_blank" rel="noopener">Live It <span aria-hidden="true">↗</span></a>
+              <a href="https://www.buzzsprout.com/2658873" target="_blank" rel="noopener">Podcast <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
@@ -632,7 +652,7 @@
         <div class="project-head">
           <div><h4>Christmas at Grace</h4><span class="label when">Oct 2026 · Concept and art direction</span></div>
           <div>
-            <p>Concepts for this year's Christmas campaign, themed Peace. I narrowed seven directions to three for the pitch, O Holy Night, Joy to the World and Heavenly Host, each built for 16:9, 4:5 and 9:16.</p>
+            <p>Concepts for the 2026 Christmas campaign, themed Peace. I narrowed seven directions to three for the pitch, O Holy Night, Joy to the World and Heavenly Host, each built for 16:9, 4:5 and 9:16.</p>
           </div>
         </div>
         <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Concept board" aria-label="View larger: Concept board"><img src="assets/gcc-christmas-board.jpg" width="2000" height="1125" alt="Concept board" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Board</span>Concept board</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="O Holy Night" aria-label="View larger: O Holy Night"><img src="assets/gcc-christmas-holy-night.jpg" width="1600" height="900" alt="O Holy Night" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>O Holy Night</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Joy to the World" aria-label="View larger: Joy to the World"><img src="assets/gcc-christmas-joy.jpg" width="1600" height="900" alt="Joy to the World" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Joy to the World</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Heavenly Host" aria-label="View larger: Heavenly Host"><img src="assets/gcc-christmas-host.jpg" width="1600" height="900" alt="Heavenly Host" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Heavenly Host</figcaption></figure></div>
@@ -655,7 +675,7 @@
             <p>Graphics for Campus Sunday and Men's Bowling Night, prayer carousels, and 44 Years of Grace, a 55-second anniversary reel.</p>
           </div>
         </div>
-        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/gcc-44-years-reel.mp4" poster="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="44 Years of Grace"></video><figcaption><span class="fmt">9:16 reel</span>44 Years of Grace</figcaption></figure><figure class="m" style="--ar:1.6913;flex:169.1 1 calc(1.6913 * var(--row-h));max-width:calc(1.6913 * var(--row-max))"><button class="zoom" type="button" data-cap="Campus Sunday" aria-label="View larger: Campus Sunday"><img src="assets/gcc-campus-sunday.jpg" width="1600" height="946" alt="Campus Sunday" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Screen</span>Campus Sunday</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Prayer carousel" aria-label="View larger: Prayer carousel"><img src="assets/gcc-prayer-carousel.jpg" width="810" height="1080" alt="Prayer carousel" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 carousel</span>Prayer carousel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Men&#x27;s Bowling Night" aria-label="View larger: Men&#x27;s Bowling Night"><img src="assets/gcc-bowling.jpg" width="1600" height="900" alt="Men&#x27;s Bowling Night" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Men&#x27;s Bowling Night</figcaption></figure></div>
+        <div class="media"><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/gcc-44-years-reel.mp4" data-poster="assets/gcc-44-years-reel-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="44 Years of Grace"></video><figcaption><span class="fmt">9:16 reel</span>44 Years of Grace</figcaption></figure><figure class="m" style="--ar:1.6913;flex:169.1 1 calc(1.6913 * var(--row-h));max-width:calc(1.6913 * var(--row-max))"><button class="zoom" type="button" data-cap="Campus Sunday" aria-label="View larger: Campus Sunday"><img src="assets/gcc-campus-sunday.jpg" width="1600" height="946" alt="Campus Sunday" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Screen</span>Campus Sunday</figcaption></figure><figure class="m" style="--ar:0.7500;flex:75.0 1 calc(0.7500 * var(--row-h));max-width:calc(0.7500 * var(--row-max))"><button class="zoom" type="button" data-cap="Prayer carousel" aria-label="View larger: Prayer carousel"><img src="assets/gcc-prayer-carousel.jpg" width="810" height="1080" alt="Prayer carousel" loading="lazy" decoding="async"></button><figcaption><span class="fmt">3:4 carousel</span>Prayer carousel</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Men&#x27;s Bowling Night" aria-label="View larger: Men&#x27;s Bowling Night"><img src="assets/gcc-bowling.jpg" width="1600" height="900" alt="Men&#x27;s Bowling Night" loading="lazy" decoding="async"></button><figcaption><span class="fmt">16:9</span>Men&#x27;s Bowling Night</figcaption></figure></div>
       </div>
     </article>
 
@@ -695,12 +715,12 @@
           <p>Afterword turns one sermon into a church's whole week of content: screen slides, lower thirds, Instagram carousels, the YouTube package and thumbnail, reels, a podcast episode and Google posts. Nothing publishes until the church approves it.</p>
           <p>I built it inside In Focus Church's weekly workflow. In one week, a single sermon produced 74 slides and lower thirds, 3 carousels, 7 reels, a podcast episode and the full YouTube and Google package.</p>
           <div class="links label">
-            <a href="https://afterwordai.com" target="_blank" rel="noopener">afterwordai.com ↗</a>
-            <a href="https://afterwordai.com/founders" target="_blank" rel="noopener">Founders pricing ↗</a>
+            <a href="https://afterwordai.com" target="_blank" rel="noopener">afterwordai.com <span aria-hidden="true">↗</span></a>
+            <a href="https://afterwordai.com/founders" target="_blank" rel="noopener">Founders pricing <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
-      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/afterword-walkthrough.mp4" poster="assets/afterword-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Product walkthrough"></video><figcaption><span class="fmt">16:9</span>Product walkthrough</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-watch-me-build.mp4" poster="assets/afterword-watch-me-build-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="Watch me build it"></video><figcaption><span class="fmt">9:16</span>Watch me build it</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-reel-revenge.mp4" poster="assets/afterword-reel-revenge-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="A reel Afterword cut from a sermon"></video><figcaption><span class="fmt">9:16 reel</span>A reel Afterword cut from a sermon</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="afterwordai.com" aria-label="View larger: afterwordai.com"><img src="assets/afterword-hero.jpg" width="1600" height="900" alt="afterwordai.com" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>afterwordai.com</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Reel review" aria-label="View larger: Reel review"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="Reel review" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Reel review</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Google post card" aria-label="View larger: Google post card"><img src="assets/afterword-companion.jpg" width="647" height="1400" alt="Google post card" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Google post card</figcaption></figure></div>
+      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/afterword-walkthrough.mp4" data-poster="assets/afterword-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Product walkthrough"></video><figcaption><span class="fmt">16:9</span>Product walkthrough</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-watch-me-build.mp4" data-poster="assets/afterword-watch-me-build-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="Watch me build it"></video><figcaption><span class="fmt">9:16</span>Watch me build it</figcaption></figure><figure class="m" style="--ar:0.5625;flex:56.2 1 calc(0.5625 * var(--row-h));max-width:calc(0.5625 * var(--row-max))"><video src="assets/afterword-reel-revenge.mp4" data-poster="assets/afterword-reel-revenge-poster.jpg" width="540" height="960" controls playsinline preload="none" aria-label="A reel Afterword cut from a sermon"></video><figcaption><span class="fmt">9:16 reel</span>A reel Afterword cut from a sermon</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="afterwordai.com" aria-label="View larger: afterwordai.com"><img src="assets/afterword-hero.jpg" width="1600" height="900" alt="afterwordai.com" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Web</span>afterwordai.com</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Reel review" aria-label="View larger: Reel review"><img src="assets/afterword-reels-screen.jpg" width="647" height="1400" alt="Reel review" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Reel review</figcaption></figure><figure class="m" style="--ar:0.4621;flex:46.2 1 calc(0.4621 * var(--row-h));max-width:calc(0.4621 * var(--row-max))"><button class="zoom" type="button" data-cap="Google post card" aria-label="View larger: Google post card"><img src="assets/afterword-companion.jpg" width="647" height="1400" alt="Google post card" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Google post card</figcaption></figure></div>
     </article>
 
     <article class="org" id="focus-coffee-app">
@@ -718,7 +738,7 @@
           <p>An order-ahead and rewards app for Focus Coffee, In Focus Church's coffee shop: live Square menu and ordering, phone-number punch cards, points and perks, and daily games.</p>
         </div>
       </div>
-      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/focus-walkthrough.mp4" poster="assets/focus-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="App walkthrough"></video><figcaption><span class="fmt">16:9</span>App walkthrough</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Home" aria-label="View larger: Home"><img src="assets/focus-frame-6.jpg" width="1600" height="900" alt="Home" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Home</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Daily games" aria-label="View larger: Daily games"><img src="assets/focus-frame-48.jpg" width="1600" height="900" alt="Daily games" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Daily games</figcaption></figure><figure class="m" style="--ar:1.0000;flex:100.0 1 calc(1.0000 * var(--row-h));max-width:calc(1.0000 * var(--row-max))"><button class="zoom" type="button" data-cap="App icon" aria-label="View larger: App icon"><img src="assets/focus-icon.jpg" width="512" height="512" alt="App icon" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Icon</span>App icon</figcaption></figure></div>
+      <div class="media"><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><video src="assets/focus-walkthrough.mp4" data-poster="assets/focus-walkthrough-poster.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="App walkthrough"></video><figcaption><span class="fmt">16:9</span>App walkthrough</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Home" aria-label="View larger: Home"><img src="assets/focus-frame-6.jpg" width="1600" height="900" alt="Home" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Home</figcaption></figure><figure class="m" style="--ar:1.7778;flex:177.8 1 calc(1.7778 * var(--row-h));max-width:calc(1.7778 * var(--row-max))"><button class="zoom" type="button" data-cap="Daily games" aria-label="View larger: Daily games"><img src="assets/focus-frame-48.jpg" width="1600" height="900" alt="Daily games" loading="lazy" decoding="async"></button><figcaption><span class="fmt">App</span>Daily games</figcaption></figure><figure class="m" style="--ar:1.0000;flex:100.0 1 calc(1.0000 * var(--row-h));max-width:calc(1.0000 * var(--row-max))"><button class="zoom" type="button" data-cap="App icon" aria-label="View larger: App icon"><img src="assets/focus-icon.jpg" width="512" height="512" alt="App icon" loading="lazy" decoding="async"></button><figcaption><span class="fmt">Icon</span>App icon</figcaption></figure></div>
     </article>
 
     <article class="org" id="third-shot">
@@ -751,12 +771,12 @@
       <div class="contact-row">
         <span class="email" id="foot-email">caleb.garrard@gmail.com</span>
         <button class="btn" type="button" id="copy-foot" data-copy="caleb.garrard@gmail.com" data-target="foot-email">Copy email</button>
-        <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/caleb-garrard-7bb913140" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
       <p class="small">Evans, Georgia. Also at <a href="https://ranchers.com" target="_blank" rel="noopener">ranchers.com</a>, <a href="https://infocus.church" target="_blank" rel="noopener">infocus.church</a> and <a href="https://afterwordai.com" target="_blank" rel="noopener">afterwordai.com</a>.</p>
     </div>
   </div>
-  <p class="small credits">Ranchers photos and footage come from the PPA Tour and MLP broadcasts. Third Shot screens use sample data. Updated October 2026.</p>
+  <p class="small credits">Ranchers photos and footage come from the PPA Tour and MLP broadcasts. Third Shot screens use sample data. Updated November 2026.</p>
 </footer>
 
 <dialog id="viewer" aria-labelledby="viewer-cap">
@@ -767,14 +787,15 @@
   </div>
   <div class="viewer-stage"><img id="viewer-img" alt=""></div>
   <div class="viewer-nav">
-    <button type="button" class="vbtn" id="viewer-prev">← Previous</button>
-    <button type="button" class="vbtn" id="viewer-next">Next →</button>
+    <button type="button" class="vbtn" id="viewer-prev"><span aria-hidden="true">←</span> Previous</button>
+    <button type="button" class="vbtn" id="viewer-next">Next <span aria-hidden="true">→</span></button>
   </div>
 </dialog>
 
 <script>
   // Copy buttons: clipboard when allowed, otherwise select the address so it can be copied by hand.
   document.querySelectorAll("[data-copy]").forEach((btn) => {
+    btn.setAttribute("aria-live", "polite");
     btn.addEventListener("click", () => {
       const done = (label) => {
         btn.textContent = label;
@@ -796,6 +817,17 @@
       }
     });
   });
+
+  // Video covers load as each video comes within about a screen of view, instead of all at page load.
+  (() => {
+    const vids = document.querySelectorAll("video[data-poster]");
+    const show = (v) => { v.poster = v.dataset.poster; v.removeAttribute("data-poster"); };
+    if (!("IntersectionObserver" in window)) { vids.forEach(show); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: "1200px 0px" });
+    vids.forEach((v) => io.observe(v));
+  })();
 
   // Only one video plays at a time.
   document.addEventListener("play", (e) => {
